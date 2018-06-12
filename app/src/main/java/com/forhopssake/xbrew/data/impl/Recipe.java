@@ -16,7 +16,8 @@ public class Recipe implements Beer {
     private List<Water> water;
     private String style;
 
-    public Recipe() {
+    public Recipe(String name) {
+        this.name = name;
         hops = new ArrayList<>();
         fermentables = new ArrayList<>();
     }
