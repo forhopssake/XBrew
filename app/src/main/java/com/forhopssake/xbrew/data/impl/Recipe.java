@@ -1,6 +1,8 @@
 package com.forhopssake.xbrew.data.impl;
 
 import com.forhopssake.xbrew.data.Beer;
+import com.forhopssake.xbrew.data.Water;
+import com.forhopssake.xbrew.data.Yeast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +12,8 @@ public class Recipe implements Beer {
     private int version;
     private List<HopAddition> hops;
     private List<Fermentable> fermentables;
+    private List<Yeast> yeasts;
+    private List<Water> water;
     private String style;
 
     public Recipe() {

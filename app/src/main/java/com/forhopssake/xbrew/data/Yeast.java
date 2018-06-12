@@ -14,7 +14,7 @@ public interface Yeast extends Ingredient {
 
     public Flocculation getFlocculation();
 
-    public double getAttenuation();
+    public float getAttenuation();
 
     public List<String> getBestForStyle();
 

@@ -9,14 +9,14 @@ import java.util.List;
 
 // Base implementation of a Hop.
 public class HopIngredient extends AbstractIngredient implements Hop {
-    private double alpha; // Required
-    private double beta;
+    private float alpha; // Required
+    private float beta;
     // Hop Instability index as percent
-    private double hsi;
-    private double humulene;
-    private double cohumulone;
-    private double caryophyllene;
-    private double myrcene;
+    private float hsi;
+    private float humulene;
+    private float cohumulone;
+    private float caryophyllene;
+    private float myrcene;
     private HopUseType useType;
     private List<String> substitutes;
     private HopFormType hopFormType;
@@ -26,60 +26,60 @@ public class HopIngredient extends AbstractIngredient implements Hop {
     }
 
     @Override
-    public double getAlpha() {
+    public float getAlpha() {
         return 0;
     }
 
-    public void setAlpha(double alpha) {
+    public void setAlpha(float alpha) {
         this.alpha = alpha;
     }
 
 
-    public double getBeta() {
+    public float getBeta() {
         return beta;
     }
 
-    public void setBeta(double beta) {
+    public void setBeta(float beta) {
         this.beta = beta;
     }
 
-    public double getHsi() {
+    public float getHsi() {
         return hsi;
     }
 
-    public void setHsi(double hsi) {
+    public void setHsi(float hsi) {
         this.hsi = hsi;
     }
 
-    public double getHumulene() {
+    public float getHumulene() {
         return humulene;
     }
 
-    public void setHumulene(double humulene) {
+    public void setHumulene(float humulene) {
         this.humulene = humulene;
     }
 
-    public double getCohumulone() {
+    public float getCohumulone() {
         return cohumulone;
     }
 
-    public void setCohumulone(double cohumulone) {
+    public void setCohumulone(float cohumulone) {
         this.cohumulone = cohumulone;
     }
 
-    public double getCaryophyllene() {
+    public float getCaryophyllene() {
         return caryophyllene;
     }
 
-    public void setCaryophyllene(double caryophyllene) {
+    public void setCaryophyllene(float caryophyllene) {
         this.caryophyllene = caryophyllene;
     }
 
-    public double getMyrcene() {
+    public float getMyrcene() {
         return myrcene;
     }
 
-    public void setMyrcene(double myrcene) {
+    public void setMyrcene(float myrcene) {
         this.myrcene = myrcene;
     }
 

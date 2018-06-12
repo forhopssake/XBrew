@@ -2,7 +2,7 @@ package com.forhopssake.xbrew.data;
 
 public class AbstractIngredient implements Ingredient {
     private String name; // required
-    private double amount; // required
+    private float amount; // required
     private String origin;
     private int version = 1;
     private String notes;
@@ -21,11 +21,11 @@ public class AbstractIngredient implements Ingredient {
     }
 
     @Override
-    public double getAmount() {
+    public float getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 

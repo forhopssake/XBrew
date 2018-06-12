@@ -4,7 +4,7 @@ import com.forhopssake.xbrew.data.HopUse;
 
 // Implementation of a Hop addition that appears in a Recipe
 public class HopAddition extends HopIngredient {
-    private double amount; // Required
+    private float amount; // Required
     private HopUse use;
     // Time in minutes from the end of the boil.
     private int time; //
@@ -13,11 +13,11 @@ public class HopAddition extends HopIngredient {
         super(name);
     }
 
-    public double getAmount() {
+    public float getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 

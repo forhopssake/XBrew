@@ -2,5 +2,5 @@ package com.forhopssake.xbrew.data;
 
 public interface Hop {
     public String getName();
-    public double getAlpha();
+    public float getAlpha();
 }

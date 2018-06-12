@@ -20,7 +20,7 @@ public class YeastIngredient extends AbstractIngredient implements Yeast {
     // max fermentation temperature in deg c
     private int maxTemperature;
     private Flocculation flocculation;
-    private double attenuation;
+    private float attenuation;
     private List<String> bestForStyles;
     private int maxReuse;
 
@@ -56,7 +56,7 @@ public class YeastIngredient extends AbstractIngredient implements Yeast {
     }
 
     @Override
-    public double getAttenuation() {
+    public float getAttenuation() {
         return 0;
     }
 
@@ -66,7 +66,7 @@ public class YeastIngredient extends AbstractIngredient implements Yeast {
     }
 
     public void addBestForStyle(String style) {
-        this.bestForStyles.add(style)
+        bestForStyles.add(style);
     }
 
     @Override

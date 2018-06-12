@@ -6,7 +6,7 @@ public interface Ingredient {
     public int getVersion();
 
     // The amount in Kilograms or litres if yeast starter
-    public double getAmount();
+    public float getAmount();
 
     public String getNotes();
 }
