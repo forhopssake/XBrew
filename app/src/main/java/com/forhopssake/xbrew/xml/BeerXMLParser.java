@@ -23,7 +23,7 @@ public class BeerXMLParser {
 
 
     // TODO: better exceptions
-    public List parseBeerXML(InputStream in) throws Exception{
+    public List parseBeerXML(InputStream in) throws Exception {
         XmlPullParser parser = Xml.newPullParser();
         try {
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -32,6 +32,7 @@ public class BeerXMLParser {
             return readRecipes(parser);
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Error parsing input stream");
+            throw new Exception("boo");
         }
     }
 
@@ -57,21 +58,21 @@ public class BeerXMLParser {
 
     private Recipe readRecipe(XmlPullParser parser) throws XmlPullParserException, IOException{
         parser.require(XmlPullParser.START_TAG, namespace, "RECIPE");
-        String name;
+        String name = "";
         while(parser.next() != XmlPullParser.END_TAG) {
 
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
             }
-            String name = parser.getName();
-            // Starts by looking for the entry tag
-            if (name.equals("NAME")) {
+            String tagName = parser.getName();
+            if (tagName.equals("NAME")) {
                 name = parser.getText();
             } else {
                 skip(parser);
             }
         }
         Recipe recipe = new Recipe(name);
+        return recipe;
     }
 
     private void skip(XmlPullParser parser) {
