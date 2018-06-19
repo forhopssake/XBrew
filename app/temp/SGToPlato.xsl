@@ -8,7 +8,8 @@
     </xsl:template>
     
     <xsl:template match="tr">
-        <xsl:value-of select="concat(td[2],',',td[1],',')"/>
+        <xsl:variable name="plato" select="td[1] + 0.1"/>
+        <xsl:value-of select="concat(td[2],',',$plato,',')"/>
     </xsl:template>
     
 </xsl:stylesheet>
