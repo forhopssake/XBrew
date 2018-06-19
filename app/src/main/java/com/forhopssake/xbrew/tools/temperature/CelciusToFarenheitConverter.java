@@ -1,4 +1,4 @@
-package com.forhopssake.xbrew.temperature;
+package com.forhopssake.xbrew.tools.temperature;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
